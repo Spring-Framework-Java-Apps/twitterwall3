@@ -33,3 +33,5 @@ buildNumber.properties
 /dist/
 /nbdist/
 /.nb-gradle/
+
+spring-shell.log
