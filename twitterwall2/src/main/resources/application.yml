@@ -40,32 +40,37 @@ spring:
       enabled: false
     name: @project.name@
   datasource:
-    driverClassName: org.postgresql.Driver
+    #driverClassName: org.postgresql.Driver
+    driverClassName: com.mysql.jdbc.Driver
     #initialSize: 5
     max-total: 20
     maxActive: 20
     maxIdle: 20
     #minIdle: 2
-    platform: POSTGRESQL
+    platform: MYSQL
+    #platform: POSTGRESQL
     #removeAbandoned: true
     tomcat:
       max-active: 20
       #max-wait: 100000
       #test-on-borrow: true
     url: ${DATABASE_URL}
+    password: ${DATABASE_PWD}
     continue-on-error: true
-    schema: classpath:org/springframework/session/jdbc/schema-postgresql.sql
+    #schema: classpath:org/springframework/session/jdbc/schema-postgresql.sql
+    schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
   devtools:
     livereload:
       enabled: false
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: ${TWITTERWALL_JPA_HIBERNATE_DDL_AUTO}
-      #ddl-auto: create-drop
+      #ddl-auto: ${TWITTERWALL_JPA_HIBERNATE_DDL_AUTO}
+      ddl-auto: create-drop
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        #dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: false
   template:
     cache: false

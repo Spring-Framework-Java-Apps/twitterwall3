@@ -20,11 +20,11 @@ import java.net.MalformedURLException;
     name = "url",
     uniqueConstraints = {
         @UniqueConstraint(name="unique_url", columnNames = {"url"})
-    },
+    }/*,
     indexes = {
         @Index(name="idx_url_expanded", columnList="expanded"),
         @Index(name="idx_url_display", columnList="display")
-    }
+    }  */
 )
 @NamedQueries({
     @NamedQuery(
@@ -52,11 +52,11 @@ public class Url extends AbstractDomainObject<Url> implements DomainObjectEntity
     protected Long id;
 
     @NotNull
-    @Column(length=4096,nullable = false)
+    @Column(columnDefinition="CHAR(2048)",nullable = false)
     private String display="";
 
     @NotNull
-    @Column(length=4096,nullable = false)
+    @Column(columnDefinition="CHAR(2048)",nullable = false)
     private String expanded="";
 
     public static final String URL_PATTTERN_FOR_USER_HTTPS = "https://t\\.co/\\w*";
@@ -65,7 +65,7 @@ public class Url extends AbstractDomainObject<Url> implements DomainObjectEntity
 
     @URL
     @NotEmpty
-    @Column(nullable = false,length=4096)
+    @Column(nullable = false,columnDefinition="TEXT")
     private String url;
 
     @Transient

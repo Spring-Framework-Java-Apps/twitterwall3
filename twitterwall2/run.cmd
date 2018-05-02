@@ -1,5 +1,9 @@
-set DATABASE_URL='jdbc:postgresql://localhost:5432/twitterwall2?user=twitterwall2&password=twitterwall2pwd'
-set DATABASE_URL_TEST='jdbc:postgresql://localhost:5432/twitterwall2test?user=twitterwall2test&password=twitterwall2testpwd'
+@REM set DATABASE_URL='jdbc:postgresql://[::1]:5432/twitterwall2?user=twitterwall2&password=twitterwall2pwd'
+@REM set DATABASE_URL_TEST='jdbc:postgresql://localhost:5432/twitterwall2test?user=twitterwall2test&password=twitterwall2testpwd'
+set DATABASE_URL=jdbc:mysql://localhost/twitterwall2?user=twitterwall2&amp;password=twitterwall2pwd
+set DATABASE_PWD=twitterwall2pwd
+set DATABASE_URL_TEST=jdbc:mysql://localhost/twitterwall2test?user=twitterwall2test&amp;password=twitterwall2testpwd
+set DATABASE_PWD_TEST=twitterwall2pwd
 set TWITTERWALL_FRONTEND_MAX_RESULTS=200
 set TWITTERWALL_SHOW_USERS_MENU=true
 set TWITTERWALL_CONTEXT_TEST=true

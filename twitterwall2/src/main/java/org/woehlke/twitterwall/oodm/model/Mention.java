@@ -23,13 +23,13 @@ import java.util.regex.Pattern;
     uniqueConstraints = {
         @UniqueConstraint(name = "unique_mention", columnNames = {"screen_name_unique", "id_twitter"}),
         @UniqueConstraint(name = "unique_mention_screen_name_unique", columnNames = {"screen_name_unique"}),
-    },
+    }/*,
     indexes = {
         @Index(name = "idx_mention_name", columnList = "name"),
         @Index(name = "idx_mention_screen_name", columnList = "screen_name"),
         @Index(name = "idx_mention_id_twitter_of_user", columnList = "id_twitter_of_user"),
         @Index(name = "idx_mention_fk_user", columnList = "fk_user")
-    }
+    }  */
 )
 @NamedQueries({
     @NamedQuery(
@@ -93,7 +93,7 @@ public class Mention extends AbstractDomainObject<Mention> implements DomainObje
     @Column(name = "screen_name_unique", nullable = false)
     private String screenNameUnique = "";
 
-    @Column(name = "name",length=4096, nullable = false)
+    @Column(name = "name", length=4096, columnDefinition="CHAR(4096)", nullable = false)
     private String name = "";
 
     @NotNull

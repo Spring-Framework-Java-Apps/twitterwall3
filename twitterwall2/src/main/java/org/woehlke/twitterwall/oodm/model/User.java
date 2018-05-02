@@ -32,9 +32,9 @@ import static javax.persistence.FetchType.LAZY;
     },
     indexes = {
         @Index(name="idx_userprofile_created_date", columnList="created_date"),
-        @Index(name="idx_userprofile_description", columnList="description"),
+        //@Index(name="idx_userprofile_description", columnList="description"),
         @Index(name="idx_userprofile_location", columnList="location"),
-        @Index(name="idx_userprofile_url", columnList="url")
+        //@Index(name="idx_userprofile_url", columnList="url")
     }
 )
 @NamedQueries({
@@ -162,13 +162,13 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column(nullable = false)
     private String name;
 
-    @Column(name="url", length = 4096)
+    @Column(name="url", length=4096, columnDefinition="CHAR(4096)")
     private String url;
 
-    @Column(length = 4096)
+    @Column(length=4096, columnDefinition="CHAR(2048)")
     private String profileImageUrl;
 
-    @Column(name="description", length = 4096)
+    @Column(name="description", length=4096, columnDefinition="CHAR(4096)")
     private String description;
 
     @Column(name="location")
@@ -238,7 +238,7 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column
     private Boolean useBackgroundImage;
 
-    @Column(length = 4096)
+    @Column(length=4096, columnDefinition="CHAR(4096)")
     private String backgroundImageUrl;
 
     @Column
@@ -259,7 +259,7 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column
     private Boolean friend;
 
-    @Column(length = 4096)
+    @Column(length=4096, columnDefinition="CHAR(4096)")
     private String profileBannerUrl;
 
     @NotNull
