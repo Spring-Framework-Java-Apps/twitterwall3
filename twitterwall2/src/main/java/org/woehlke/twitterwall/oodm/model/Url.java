@@ -17,14 +17,14 @@ import java.net.MalformedURLException;
  */
 @Entity
 @Table(
-    name = "url",
+    name = "url"/*,
     uniqueConstraints = {
         @UniqueConstraint(name="unique_url", columnNames = {"url"})
-    }/*,
+    },
     indexes = {
         @Index(name="idx_url_expanded", columnList="expanded"),
         @Index(name="idx_url_display", columnList="display")
-    }  */
+    } */
 )
 @NamedQueries({
     @NamedQuery(
@@ -51,18 +51,21 @@ public class Url extends AbstractDomainObject<Url> implements DomainObjectEntity
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
 
+    @Lob
     @NotNull
-    @Column(columnDefinition="CHAR(2048)",nullable = false)
+    @Column(columnDefinition="TEXT",nullable = false)
     private String display="";
 
+    @Lob
     @NotNull
-    @Column(columnDefinition="CHAR(2048)",nullable = false)
+    @Column(columnDefinition="TEXT",nullable = false)
     private String expanded="";
 
     public static final String URL_PATTTERN_FOR_USER_HTTPS = "https://t\\.co/\\w*";
 
     public static final String URL_PATTTERN_FOR_USER_HTTP = "http://t\\.co/\\w*";
 
+    @Lob
     @URL
     @NotEmpty
     @Column(nullable = false,columnDefinition="TEXT")

@@ -17,12 +17,12 @@ import java.net.MalformedURLException;
  */
 @Entity
 @Table(
-    name = "tickersymbol",
+    name = "tickersymbol"/*,
     uniqueConstraints = {
         @UniqueConstraint(name="unique_tickersymbol", columnNames = {"url","ticker_symbol"}),
         @UniqueConstraint(name="unique_tickersymbol_url", columnNames = {"url"}),
         @UniqueConstraint(name="unique_tickersymbol_ticker_symbol", columnNames = {"ticker_symbol"})
-    }
+    }   */
 )
 @NamedQueries({
     @NamedQuery(
@@ -39,11 +39,15 @@ public class TickerSymbol extends AbstractDomainObject<TickerSymbol> implements 
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
 
+
+    @Lob
     @NotEmpty
     @SafeHtml
     @Column(name = "ticker_symbol",length=4096,nullable = false)
     private String tickerSymbol = "";
 
+
+    @Lob
     @URL
     @NotEmpty
     @Column(name = "url",length=4096,nullable = false)

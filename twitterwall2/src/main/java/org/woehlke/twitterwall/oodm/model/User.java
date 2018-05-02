@@ -162,13 +162,16 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column(nullable = false)
     private String name;
 
-    @Column(name="url", length=4096, columnDefinition="CHAR(4096)")
+    @Lob
+    @Column(name="url", length=4096, columnDefinition="TEXT")
     private String url;
 
-    @Column(length=4096, columnDefinition="CHAR(2048)")
+    @Lob
+    @Column(length=4096, columnDefinition="TEXT")
     private String profileImageUrl;
 
-    @Column(name="description", length=4096, columnDefinition="CHAR(4096)")
+    @Lob
+    @Column(name="description", length=4096, columnDefinition="TEXT")
     private String description;
 
     @Column(name="location")
@@ -238,7 +241,8 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column
     private Boolean useBackgroundImage;
 
-    @Column(length=4096, columnDefinition="CHAR(4096)")
+    @Lob
+    @Column(length=4096, columnDefinition="TEXT")
     private String backgroundImageUrl;
 
     @Column
@@ -259,7 +263,8 @@ public class User extends AbstractDomainObject<User> implements DomainObjectWith
     @Column
     private Boolean friend;
 
-    @Column(length=4096, columnDefinition="CHAR(4096)")
+    @Lob
+    @Column(length=4096, columnDefinition="TEXT")
     private String profileBannerUrl;
 
     @NotNull

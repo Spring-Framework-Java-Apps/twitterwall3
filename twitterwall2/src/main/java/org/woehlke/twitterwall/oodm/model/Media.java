@@ -21,15 +21,15 @@ import java.net.MalformedURLException;
     name = "media",
     uniqueConstraints = {
         @UniqueConstraint(name="unique_media_id_twitter", columnNames = {"id_twitter"})
-    }//,
-    //indexes = {
-        //@Index(name="idx_media_url", columnList= "url"),
-        //@Index(name="idx_media_expanded", columnList="expanded"),
-        //@Index(name="idx_media_display", columnList="display") ,
-        //@Index(name="idx_media_media_http", columnList="media_http"),
-        //@Index(name="idx_media_media_https", columnList="media_https"),
-        //@Index(name="idx_media_media_type", columnList="media_type")
-    //}
+    }/*,
+    indexes = {
+        @Index(name="idx_media_url", columnList= "url"),
+        @Index(name="idx_media_expanded", columnList="expanded"),
+        @Index(name="idx_media_display", columnList="display") ,
+        @Index(name="idx_media_media_http", columnList="media_http"),
+        @Index(name="idx_media_media_https", columnList="media_https"),
+        @Index(name="idx_media_media_type", columnList="media_type")
+    }  */
 )
 @NamedQueries({
     @NamedQuery(
@@ -50,29 +50,35 @@ public class Media extends AbstractDomainObject<Media> implements DomainObjectEn
     @Column(name="id_twitter", nullable = false)
     private Long idTwitter;
 
+    @Lob
     @NotNull
-    @Column(name = "media_http", length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(name = "media_http", length=4096, columnDefinition="TEXT", nullable = false)
     private String mediaHttp = "";
 
+    @Lob
     @NotNull
-    @Column(name = "media_https", length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(name = "media_https", length=4096, columnDefinition="TEXT", nullable = false)
     private String mediaHttps = "";
 
     @URL
+    @Lob
     @NotEmpty
-    @Column(length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(length=4096, columnDefinition="TEXT", nullable = false)
     private String url;
 
+    @Lob
     @NotNull
-    @Column(length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(length=4096, columnDefinition="TEXT", nullable = false)
     private String display = "";
 
+    @Lob
     @NotNull
-    @Column(length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(length=4096, columnDefinition="TEXT", nullable = false)
     private String expanded = "";
 
+    @Lob
     @NotNull
-    @Column(name = "media_type", length=4096, columnDefinition="CHAR(4096)", nullable = false)
+    @Column(name = "media_type", length=4096, columnDefinition="TEXT", nullable = false)
     private String mediaType = "";
 
 
