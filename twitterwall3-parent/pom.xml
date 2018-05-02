@@ -35,6 +35,12 @@
         <org.webjars.bootstrap.version>4.1.0</org.webjars.bootstrap.version>
         <org.webjars.font-awesome.version>5.0.10</org.webjars.font-awesome.version>
 
+
+
+        <org.apache.maven.plugins.maven-enforcer-plugin.version>3.0.0-M1</org.apache.maven.plugins.maven-enforcer-plugin.version>
+
+        <org.springframework.boot.spring-boot-maven-plugin.version>2.0.1.RELEASE</org.springframework.boot.spring-boot-maven-plugin.version>
+        <org.apache.maven.plugins.maven-site-plugin>3.7.1</org.apache.maven.plugins.maven-site-plugin>
         <org.apache.maven.scm.plugin.version>1.9.5</org.apache.maven.scm.plugin.version>
         <org.apache.maven.plugins.maven-scm-publish-plugin.version>3.0.0</org.apache.maven.plugins.maven-scm-publish-plugin.version>
         <org.apache.maven.plugins.maven-release-plugin.version>2.5.3</org.apache.maven.plugins.maven-release-plugin.version>
@@ -70,14 +76,14 @@
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M1</version>
+                <version>${org.apache.maven.plugins.maven-enforcer-plugin.version}</version>
                 <type>maven-plugin</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.0.1.RELEASE</version>
+                <version>${org.springframework.boot.spring-boot-maven-plugin.version}</version>
                 <type>maven-plugin</type>
                 <scope>compile</scope>
             </dependency>
@@ -112,7 +118,7 @@
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.7.1</version>
+                <version>${org.apache.maven.plugins.maven-site-plugin}</version>
                 <type>maven-plugin</type>
                 <scope>compile</scope>
             </dependency>

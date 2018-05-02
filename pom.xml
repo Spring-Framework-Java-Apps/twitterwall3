@@ -34,6 +34,8 @@
         <org.apache.maven.plugins.maven-scm-publish-plugin.version>3.0.0</org.apache.maven.plugins.maven-scm-publish-plugin.version>
         <org.apache.maven.plugins.maven-release-plugin.version>2.5.3</org.apache.maven.plugins.maven-release-plugin.version>
 
+        <org.apache.maven.plugins.maven-site-plugin>3.7.1</org.apache.maven.plugins.maven-site-plugin>
+
         <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
         <spring-shell.version>2.0.0.RELEASE</spring-shell.version>
     </properties>
@@ -54,6 +56,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-site-plugin}</version>
+                <type>maven-plugin</type>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
                 <groupId>org.codehaus.plexus</groupId>
                 <artifactId>plexus-utils</artifactId>
