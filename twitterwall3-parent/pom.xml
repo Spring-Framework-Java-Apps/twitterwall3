@@ -19,10 +19,8 @@
 
     <name>twitterwall3-parent</name>
 
-
-
     <description>installs twitterwall3</description>
-    <url>https://phasenraum2010.github.io/twitterwall3/</url>
+    <url>https://phasenraum2010.github.io/twitterwall3/twitterwall3-parent/</url>
     <organization>
         <name>Thomas Woehlke</name>
         <url>https://twitter.com/ThomasWoehlke</url>

@@ -1,0 +1,1 @@
+/* my own JavaScript. (c) 2017 Thomas Woehlke */

@@ -1,0 +1,287 @@
+/* my own CSS. (c) 2017 Thomas Woehlke */
+
+@media all {
+
+    body {
+        font-family: 'Titillium Web', sans-serif !important;
+        font-weight: 100 !important;
+        font-size: 18px;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Titillium Web', sans-serif !important;
+        font-weight: 100 !important;
+    }
+
+    iframe, object, embed {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    #jumbotron-header h1 span.header-h1,
+    #jumbotron-header h1 small {
+        color: rgb(85, 85, 85);
+        background-color: rgba(255,255,255,0.7);
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 4px;
+    }
+
+    h1.textmedia-header span.header-h1 {
+        color: rgb(85, 85, 85);
+    }
+
+    img {
+        border-radius: 4px;
+    }
+
+    .navbar-right {
+        margin-right: 0px;
+    }
+
+    .thumbnail {
+        float: left;
+        margin: 8px;
+    }
+
+    .thumbnail img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tweet-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnail .thumbnail {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .tw-debug {
+        visibility: hidden;
+        display: none;
+    }
+
+    .thumbnail:hover {
+        background-color: #DDDDDD;
+    }
+
+    .img-responsive.my-background {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-circle.my-profile-image {
+        width: 45%;
+        height: auto;
+    }
+
+    .img-circle.my-profile-image-with-bg {
+        margin-top: -50px;
+    }
+
+    .tw-vector {
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .tw-pager-arrow {
+        display: block;
+        font-size: 6em;
+        width: 100%
+    }
+
+    .tw-pager-arrow a span {
+        text-align: center;
+    }
+
+    .tw-pager-arrow a span i {
+        display: block !important;
+    }
+
+    .tw-pager-arrow a span i:hover {
+        text-decoration: none !important;
+        background-color: #DDDDDD;
+        color: rgb(51, 51, 51);
+    }
+
+    dl.tw-data-array {
+        list-style-type: none;
+    }
+
+    dl.tw-data-array dt {
+        display: inline-block;
+        float: left;
+        clear: both;
+        margin-right: 14px;
+    }
+
+    dl.tw-data-array dd {
+        display: inline-block;
+        font-weight: bold;
+        float: left;
+    }
+
+    ul.tw-data-view-common-fields,
+    ul.tw-data-view-common-fields li {
+        list-style-type: none;
+    }
+
+    #tw-application-management ul li {
+        list-style-type: none;
+    }
+
+    .tw-left-space {
+        margin-left: 12px;
+    }
+
+    .tw-right-space {
+        margin-right: 12px;
+    }
+
+    .tw-vector-hashtag-overview {
+        margin-right: 1em;
+    }
+
+    i.fa, span.map-icon, span.glyphicon  {
+        margin-right: 0.25em;
+    }
+
+    i.tw-verified {
+        color: #317eac;
+    }
+}
+
+
+/*
+Standad Breakpoints Bootstrap:
+xs: Extra small devices - Phones (<768px)
+sm: Small devices - Tablets (≥768px)
+md: Medium devices - Desktops (≥992px)
+lg: Large devices - Desktops (≥1200px)
+*/
+
+
+/* xs: Extra small devices - Phones (<768px) */
+@media screen and (max-width: 767px) {
+
+    .navbar-nav .open .dropdown-menu {
+        background-color: #317eac !important;
+    }
+
+    /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+    .tw-col-4-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr; /* 1 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-4s-box {
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+    }
+
+    .tw-col-3-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr; /* 1 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-3-box-center {
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 1;
+    }
+}
+
+/* sm: Small devices - Tablets (≥768px) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+    .tw-col-4-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr; /* 3 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+    .tw-col-4s-box {
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+    }
+
+    .tw-col-3-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr; /* 3 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-3-box-center {
+        grid-column: 2/ span 1;
+        grid-row: 1 / span 1;
+    }
+}
+
+/* md: Medium devices - Desktops (≥992px)  */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+
+    /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+    .tw-col-4-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-4s-box {
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+    }
+
+    .tw-col-3-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr; /* 3ss x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-3-box-center {
+        grid-column: 2/ span 1;
+        grid-row: 1 / span 1;
+    }
+
+}
+
+/* lg: Large devices - Desktops (≥1200px)  */
+@media screen and (min-width: 1200px) {
+
+    /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+    .tw-col-4-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-4s-box {
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+    }
+
+    .tw-col-3-wrapper {
+        display: grid; /* display: inline-grid;*/
+        grid-template-columns: 1fr 1fr 1fr; /* 3ss x 1 fraction */
+        grid-gap: 8px;
+    }
+
+    .tw-col-3-box-center {
+        grid-column: 2/ span 1;
+        grid-row: 1 / span 1;
+    }
+}
+
+
+
+
+
