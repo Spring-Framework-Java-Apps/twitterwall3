@@ -21,19 +21,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
-
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <failsafe.skipAfterFailureCount>1</failsafe.skipAfterFailureCount>
         <surefire.skipAfterFailureCount>1</surefire.skipAfterFailureCount>
         <resource.delimiter>@</resource.delimiter>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+
         <!--
         <main.basedir>../${basedir}</main.basedir>
         -->
         <org.apache.maven.scm.plugin.version>1.9.5</org.apache.maven.scm.plugin.version>
         <org.apache.maven.plugins.maven-scm-publish-plugin.version>3.0.0</org.apache.maven.plugins.maven-scm-publish-plugin.version>
         <org.apache.maven.plugins.maven-release-plugin.version>2.5.3</org.apache.maven.plugins.maven-release-plugin.version>
+
+        <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
+        <spring-shell.version>2.0.0.RELEASE</spring-shell.version>
     </properties>
 
     <modules>
@@ -180,76 +182,11 @@
     </dependencyManagement>
 
     <dependencies>
-        <!--
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-scm-plugin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-providers</artifactId>
-        </dependency>
-        -->
-        <!--
-       <dependency>
-           <groupId>org.apache.maven.scm</groupId>
-           <artifactId>maven-scm-api</artifactId>
-           <scope>compile</scope>
-       </dependency>
-       <dependency>
-           <groupId>org.apache.maven.scm</groupId>
-           <artifactId>maven-scm-providers-svn</artifactId>
-       </dependency>
-
-       <dependency>
-           <groupId>org.apache.maven.scm</groupId>
-           <artifactId>maven-scm-provider-svnexe</artifactId>
-       </dependency>
-       <dependency>
-           <groupId>org.apache.maven.scm</groupId>
-           <artifactId>maven-scm-provider-svn-commons</artifactId>
-       </dependency>
-        -->
-
         <dependency>
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-provider-jgit</artifactId>
             <scope>compile</scope>
         </dependency>
-
-
-        <!--
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-providers-git</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-provider-gitexe</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-provider-git-commons</artifactId>
-        </dependency>
-        -->
-        <!--
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-managers</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-manager-plexus</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.scm</groupId>
-            <artifactId>maven-scm-client</artifactId>
-        </dependency>
-        -->
     </dependencies>
 
     <!-- https://maven.apache.org/plugins/maven-project-info-reports-plugin/plugin-management.html -->

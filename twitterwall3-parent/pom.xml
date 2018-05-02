@@ -22,12 +22,25 @@
     <description>Added other things to starter parent from org.springframework.boot</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <failsafe.skipAfterFailureCount>1</failsafe.skipAfterFailureCount>
+        <surefire.skipAfterFailureCount>1</surefire.skipAfterFailureCount>
+        <resource.delimiter>@</resource.delimiter>
+
         <org.webjars.jquery.version>3.3.1</org.webjars.jquery.version>
         <org.webjars.bootstrap.version>4.1.0</org.webjars.bootstrap.version>
         <org.webjars.font-awesome.version>5.0.10</org.webjars.font-awesome.version>
+
         <org.apache.maven.scm.plugin.version>1.9.5</org.apache.maven.scm.plugin.version>
         <org.apache.maven.plugins.maven-scm-publish-plugin.version>3.0.0</org.apache.maven.plugins.maven-scm-publish-plugin.version>
         <org.apache.maven.plugins.maven-release-plugin.version>2.5.3</org.apache.maven.plugins.maven-release-plugin.version>
+
+        <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
+        <spring-shell.version>2.0.0.RELEASE</spring-shell.version>
     </properties>
 
     <dependencyManagement>
