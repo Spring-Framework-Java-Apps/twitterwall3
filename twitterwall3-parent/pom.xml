@@ -19,7 +19,49 @@
 
     <name>twitterwall3-parent</name>
 
-    <description>Added other things to starter parent from org.springframework.boot</description>
+
+
+    <description>installs twitterwall3</description>
+    <url>https://phasenraum2010.github.io/twitterwall3/</url>
+    <organization>
+        <name>Thomas Woehlke</name>
+        <url>https://twitter.com/ThomasWoehlke</url>
+    </organization>
+    <inceptionYear>2017</inceptionYear>
+
+    <scm>
+        <url>https://github.com/phasenraum2010/twitterwall3.git</url>
+        <connection>scm:git:https://github.com/phasenraum2010/twitterwall3.git</connection>
+        <developerConnection>scm:git:https://github.com/phasenraum2010/twitterwall3.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/phasenraum2010/twitterwall3/issues</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <site>
+            <id>simpleworklist.shadowfax.fritz.box</id>
+            <url>file://${project.basedir}/target/site-deployed</url>
+        </site>
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <name>Thomas Wöhlke</name>
+            <email>thomas@woehlke.org</email>
+            <url>https://github.com/phasenraum2010</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,8 +76,6 @@
         <org.webjars.jquery.version>3.3.1</org.webjars.jquery.version>
         <org.webjars.bootstrap.version>4.1.0</org.webjars.bootstrap.version>
         <org.webjars.font-awesome.version>5.0.10</org.webjars.font-awesome.version>
-
-
 
         <org.apache.maven.plugins.maven-enforcer-plugin.version>3.0.0-M1</org.apache.maven.plugins.maven-enforcer-plugin.version>
 
